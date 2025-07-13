@@ -120,6 +120,7 @@ export default function Home() {
                   } years of experience as ${doctor.specialization}`,
                   qualification: doctor?.medicalDegree,
                   role: "doctor",
+                  experience: doctor?.experience,
                 };
               });
               setSearchResults(doctors);

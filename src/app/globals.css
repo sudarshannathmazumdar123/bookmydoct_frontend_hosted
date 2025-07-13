@@ -70,3 +70,32 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  background: #f8f8f8; /* optional background */
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;
+  font-weight: 500;
+  color: #333;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee p:hover {
+  animation-play-state: paused;
+}
