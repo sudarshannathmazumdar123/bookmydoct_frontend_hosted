@@ -401,6 +401,7 @@ export default function Home() {
               <h2 className="text-2xl font-bold text-white text-center mb-8">
                 How It Works
               </h2>
+
               <div className="flex flex-col md:flex-row justify-center gap-8 max-w-4xl mx-auto">
                 {[
                   {
@@ -434,6 +435,49 @@ export default function Home() {
                     <p className="text-sm text-white">{step.description}</p>
                   </div>
                 ))}
+              </div>
+            </section>
+
+            <section className="py-12 bg-white">
+              <div className="container mx-auto px-4 md:px-6 text-center">
+                <h2 className="text-3xl font-bold text-primary mb-8">
+                  Trusted by Our Growing Community
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-extrabold text-blue-600">
+                      200+
+                    </h3>
+                    <p className="text-lg font-medium text-gray-700 mt-2">
+                      Doctors
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      Available for appointments and consultations
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-extrabold text-blue-600">
+                      15+
+                    </h3>
+                    <p className="text-lg font-medium text-gray-700 mt-2">
+                      Hospitals
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      Partnered for your healthcare needs
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <h3 className="text-4xl font-extrabold text-blue-600">
+                      1000+
+                    </h3>
+                    <p className="text-lg font-medium text-gray-700 mt-2">
+                      Patients
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      Already booked their appointments
+                    </p>
+                  </div>
+                </div>
               </div>
             </section>
 
