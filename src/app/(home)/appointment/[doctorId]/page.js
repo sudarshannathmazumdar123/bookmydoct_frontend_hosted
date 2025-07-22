@@ -61,6 +61,7 @@ export default function AppointmentBookingForm() {
 
   const fetchDoctor = async (docId) => {
     const res = await getDoctorById(docId);
+    console.log("res :: ", res);
     setDoctor(res.doctor);
     setPlatformFees(res.platformFee);
   };
@@ -141,6 +142,7 @@ export default function AppointmentBookingForm() {
 
     if (name === "clinicId") {
       const clinic = clinics.find((c) => c._id === value);
+      console.log("clinic :: ", clinic);
       setSelectedClinic(clinic || null);
       setdoctorPrice(
         doctor?.fees.find((f) => f.clinicId === clinic._id)?.fee || 0
@@ -325,6 +327,9 @@ export default function AppointmentBookingForm() {
                   <p className="text-sm text-gray-600">
                     {selectedClinic.address}
                   </p>
+                  <p className="text-sm text-gray-600">
+                    {selectedClinic.notes}
+                  </p>
                 </CardContent>
               </Card>
             )}
@@ -345,6 +350,9 @@ export default function AppointmentBookingForm() {
             )}
             {selectedClinic && currentStep === 2 && (
               <div>
+                <article>
+                  <p>{doctor.doctorNotes}</p>
+                </article>
                 {formData.appointmentDate && availableSlots.length > 0 && (
                   <div>
                     <label htmlFor="time-slot">Select a Time Slot</label>

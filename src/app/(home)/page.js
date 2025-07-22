@@ -101,6 +101,7 @@ export default function Home() {
                 return {
                   id: clinic._id,
                   name: clinic?.name,
+                  notes: clinic?.notes,
                   address: clinic?.address,
                   image: "/hospital.png",
                   role: "clinic",
