@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server'
 const authRoutes = ['/signin', '/signup', '/forgot-password', '/reset-password']
 const userRoutes = ['/appointment', '/appointments', '/labTestBookings', '/profile', '/admin', '/superAdmin']
 
-export function middleware(request) {
+export function proxy(request) {
     const token = request.headers.get('cookie');
     const url = request.nextUrl.pathname
 
