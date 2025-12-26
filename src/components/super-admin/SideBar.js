@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link'
-import { Home, DollarSign, Users, Settings, BarChart, Hospital, PenTool } from 'lucide-react'
+import { Home, DollarSign, Users, Settings, BarChart, Hospital, PenTool, BriefcaseMedical } from 'lucide-react'
 import { useState } from 'react'
 
 const Sidebar = ({ open }) => {
@@ -23,6 +23,9 @@ const Sidebar = ({ open }) => {
                 </Link>
                 <Link href="/superAdmin/specializations" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
                     <PenTool className="inline-block mr-2 w-5 h-5" /> Manage Specializations
+                </Link>
+                <Link href="/superAdmin/allappointments" className="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 hover:text-white">
+                    <BriefcaseMedical className="inline-block mr-2 w-5 h-5" /> All Appointments
                 </Link>
             </nav>
         </div>

@@ -90,6 +90,15 @@ const useSuperAdminStore = create(persist(
                 toast.error(err.response?.data?.message || "Error deleting specialization");
                 throw err;
             }
+        },
+        getAllAppointments: async () => {
+            try {
+                const res = await api.get('/admin/get-all-appointments');
+                return res.data;
+            } catch (error) {
+                toast.error(err.response?.data?.message || "Error getting appointments");
+                throw err;
+            }
         }
     }),
     {
